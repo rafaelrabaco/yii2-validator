@@ -6,6 +6,8 @@ jobs:
       - image: composer:latest
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Setup GitHub Keys
           command: "composer config --global github-oauth.github.com ${GITHUB_KEY}"
@@ -15,18 +17,19 @@ jobs:
       - run:
           name: Update composer packages
           command: 'composer update --prefer-dist --no-interaction'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - save_cache:
           key: dependency-cache-{{ checksum "composer.json" }}
           paths:
             - vendor
+            - ~/.composer
 
   test56:
     docker:
       - image: php:5.6-fpm-alpine
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Install composer
           command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
@@ -39,12 +42,11 @@ jobs:
       - run:
           name: Update composer packages
           command: 'composer update --prefer-dist --no-interaction'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - save_cache:
           key: dependency-cache-{{ checksum "composer.json" }}
           paths:
             - vendor
+            - ~/.composer
       - run:
           name: Test in PHP 5.6
           command: composer run test
@@ -54,6 +56,8 @@ jobs:
       - image: php:7.0-fpm-alpine
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Install composer
           command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
@@ -66,12 +70,11 @@ jobs:
       - run:
           name: Update composer packages
           command: 'composer update --prefer-dist --no-interaction'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - save_cache:
           key: dependency-cache-{{ checksum "composer.json" }}
           paths:
             - vendor
+            - ~/.composer
       - run:
           name: Test in PHP 7.0
           command: composer run test
@@ -81,6 +84,8 @@ jobs:
       - image: php:7.1-fpm-alpine
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Install composer
           command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
@@ -93,12 +98,11 @@ jobs:
       - run:
           name: Update composer packages
           command: 'composer update --prefer-dist --no-interaction'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - save_cache:
           key: dependency-cache-{{ checksum "composer.json" }}
           paths:
             - vendor
+            - ~/.composer
       - run:
           name: Test in PHP 7.1
           command: composer run test
