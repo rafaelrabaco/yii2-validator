@@ -9,6 +9,7 @@ Yii2 Extension that provide validations and features for Brazilian and Portugal 
 * NIF: Número de identificação fiscal **(PT)**
  
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
+[![CircleCI](https://circleci.com/gh/rafaelrabaco/yii2-validator.svg?style=shield)](https://circleci.com/gh/rafaelrabaco/yii2-validator)
 [![Latest Stable Version](https://poser.pugx.org/rafaelrabaco/yii2-validator/v/stable.png)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
 [![Total Downloads](https://poser.pugx.org/rafaelrabaco/yii2-validator/downloads.png)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
 
