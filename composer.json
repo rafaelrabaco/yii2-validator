@@ -1,0 +1,45 @@
+{
+  "name": "rafaelrabaco/yii2-validator",
+  "description": "Validações de documentos do Brasil e Portugal",
+  "keywords": [
+    "yii",
+    "validator",
+    "model",
+    "brasil",
+    "brazil",
+    "br",
+    "cpf",
+    "cnpj",
+    "nif",
+    "pt",
+    "Portugal"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/rafaelrabaco/yii2-validator/issues",
+    "source": "https://github.com/rafaelrabaco/yii2-validator"
+  },
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Rafael Rabaço",
+      "email": "rafaelrabaco@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "rafaelrabaco\\validator\\": ""
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --debug -v --coverage-clover=coverage.clover"
+  }
+
+}
