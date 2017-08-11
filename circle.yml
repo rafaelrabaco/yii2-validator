@@ -81,7 +81,7 @@ jobs:
 
   test71:
     docker:
-      - image: zaherg:php-7.1-xdebug-alpine
+      - image: zaherg/php-7.1-xdebug-alpine:latest
     steps:
       - checkout
       - restore_cache:
