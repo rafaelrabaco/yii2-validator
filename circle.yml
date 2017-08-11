@@ -56,17 +56,11 @@ jobs:
 
   test70:
     docker:
-      - image: php:7.0-fpm-alpine
+      - image: zaherg/php-7.0-xdebug-alpine:latest
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
-      - run:
-          name: Install composer
-          command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
-      - run:
-          name: Setup composer
-          command: 'apk add git && composer config --global github-protocols https && git config --global url."https://".insteadOf "git://"'
+#      - restore_cache:
+#          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
@@ -90,14 +84,8 @@ jobs:
       - image: zaherg/php-7.1-xdebug-alpine:latest
     steps:
       - checkout
-#      - restore_cache:
-#          key: dependency-cache-{{ checksum "composer.json" }}
-#      - run:
-#          name: Install composer
-#          command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
-      - run:
-          name: Setup composer
-          command: 'composer config --global github-protocols https && git config --global url."https://".insteadOf "git://"'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
