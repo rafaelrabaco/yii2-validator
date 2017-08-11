@@ -4,7 +4,7 @@
          convertNoticesToExceptions="true"
          convertErrorsToExceptions="true"
          stopOnFailure="false">
-    
+
     <testsuites>
         <testsuite name="Tests">
             <directory suffix=".php">./tests/cases/</directory>

@@ -52,6 +52,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Setup Codecov
+          command: 'apk add --update curl bash git'
+      - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
       - run:
