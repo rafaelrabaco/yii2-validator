@@ -8,10 +8,11 @@ Yii2 Extension that provide validations and features for Brazilian and Portugal 
 * CEI: Cadastro específico no INSS **(BR)**
 * NIF: Número de identificação fiscal **(PT)**
  
-[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
-[![CircleCI](https://circleci.com/gh/rafaelrabaco/yii2-validator.svg?style=shield)](https://circleci.com/gh/rafaelrabaco/yii2-validator)
-[![Latest Stable Version](https://poser.pugx.org/rafaelrabaco/yii2-validator/v/stable.png)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
-[![Total Downloads](https://poser.pugx.org/rafaelrabaco/yii2-validator/downloads.png)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
+[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat-square)](http://www.yiiframework.com/)
+[![CircleCI](https://img.shields.io/circleci/project/github/rafaelrabaco/yii2-validator.svg?style=flat-square)](https://circleci.com/gh/rafaelrabaco/yii2-validator)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E=5.6-8892BF.svg?style=flat-square)](https://php.net)
+[![Latest Stable Version](https://poser.pugx.org/rafaelrabaco/yii2-validator/v/stable.png?style=flat-square)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
+[![Total Downloads](https://img.shields.io/packagist/dt/rafaelrabaco/yii2-validator.svg?style=flat-square)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
 
 Installation
 ------------

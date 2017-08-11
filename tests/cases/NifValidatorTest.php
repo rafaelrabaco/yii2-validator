@@ -1,15 +1,15 @@
 <?php
 
-namespace rafaelrabaco\validator\tests;
+namespace rafaelrabaco\validator\tests\cases;
 
 use Yii;
 use rafaelrabaco\validator\NifValidator;
-
+use rafaelrabaco\validator\tests\Test;
 
 /**
  * NifValidatorTest
  */
-class NifValidatorTest extends TestCase
+class NifValidatorTest extends Test
 {
     public function testValidateValue()
     {

@@ -8,7 +8,7 @@ use yii\base\NotSupportedException;
 /**
  * This is the base class for all brvalidator unit tests.
  */
-class TestCase extends \PHPUnit_Framework_TestCase
+class Test extends \PHPUnit_Framework_TestCase
 {
     /**
      * This method is called before the first test of this test class is run.
@@ -42,7 +42,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Sets up before test 
+     * Sets up before test
      */
     protected function setUp()
     {

@@ -106,6 +106,9 @@ jobs:
       - run:
           name: Test in PHP 7.1
           command: composer run test
+      - run:
+          name: Uploading to codecov.io
+          command: 'bash <(curl -s https://codecov.io/bash)'
 
 workflows:
   version: 2

@@ -1,15 +1,15 @@
 <?php
 
-namespace rafaelrabaco\validator\tests;
+namespace rafaelrabaco\validator\tests\cases;
 
 use Yii;
 use rafaelrabaco\validator\CpfValidator;
-
+use rafaelrabaco\validator\tests\Test;
 
 /**
  * CpfValidatorTest
  */
-class CpfValidatorTest extends TestCase
+class CpfValidatorTest extends Test
 {
     public function testValidateValue()
     {
