@@ -9,9 +9,6 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "composer.json" }}
       - run:
-          name: Setup composer
-          command: 'composer config --global github-protocols https && git config --global url."https://".insteadOf "git://"'
-      - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
       - run:
