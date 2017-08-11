@@ -52,9 +52,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Setup Codecov
-          command: 'apk add --update curl bash git'
-      - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
       - run:
@@ -71,9 +68,6 @@ jobs:
       - run:
           name: Test in PHP 7.1
           command: composer run test
-      - run:
-          name: Uploading to codecov.io
-          command: "bash <(curl -s https://codecov.io/bash) || echo 'Codecov failed to upload'"
 
 workflows:
   version: 2
