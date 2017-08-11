@@ -4,14 +4,17 @@
          convertNoticesToExceptions="true"
          convertErrorsToExceptions="true"
          stopOnFailure="false">
+    
     <testsuites>
         <testsuite name="Tests">
             <directory suffix=".php">./tests/cases/</directory>
         </testsuite>
     </testsuites>
+
     <logging>
         <log type="coverage-clover" target="coverage.xml"/>
     </logging>
+
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix="*.php">./</directory>
