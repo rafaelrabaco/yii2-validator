@@ -158,16 +158,17 @@ rabaco.validation = (function ($) {
             var valid = true;
             var nif = value.split('');
 
-            var check1 = nif.substr(0, 1) * 9;
-            var check2 = nif.substr(1, 1) * 8;
-            var check3 = nif.substr(2, 1) * 7;
-            var check4 = nif.substr(3, 1) * 6;
-            var check5 = nif.substr(4, 1) * 5;
-            var check6 = nif.substr(5, 1) * 4;
-            var check7 = nif.substr(6, 1) * 3;
-            var check8 = nif.substr(7, 1) * 2;
+            nif[0] = nif[0] * 9;
+            nif[1] = nif[1] * 8;
+            nif[2] = nif[2] * 7;
+            nif[3] = nif[3] * 6;
+            nif[4] = nif[4] * 5;
+            nif[5] = nif[5] * 4;
+            nif[6] = nif[6] * 3;
+            nif[7] = nif[7] * 2;
+            nif[8] = nif[8] * 1;
 
-            var total = check1 + check2 + check3 + check4 + check5 + check6 + check7 + check8;
+            var total = nif[0] + nif[1] + nif[2] + nif[3] + nif[4] + nif[5] + nif[6] + nif[7];
             var divisao = total / 11;
             var checkDivisao = total - parseInt(divisao) * 11;
 
@@ -177,8 +178,7 @@ rabaco.validation = (function ($) {
                 var comparador = 11 - checkDivisao;
             }
 
-
-            var ultimoDigito = nif.substr(8, 1) * 1;
+            var ultimoDigito = nif[8];
             if (ultimoDigito != comparador) {
                 valid = false;
             }
