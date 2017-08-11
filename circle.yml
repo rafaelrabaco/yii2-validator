@@ -81,7 +81,7 @@ jobs:
 
   test71:
     docker:
-      - image: php:7.1-fpm-alpine
+      - image: zaherg:php-7.1-xdebug-alpine
     steps:
       - checkout
       - restore_cache:
@@ -108,7 +108,7 @@ jobs:
           command: composer run test
       - run:
           name: Uploading to codecov.io
-          command: 'bash <(curl -s https://codecov.io/bash)'
+          command: 'bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"'
 
 workflows:
   version: 2
