@@ -28,8 +28,6 @@ jobs:
       - image: php:5.6-fpm-alpine
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Install composer
           command: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"
@@ -59,8 +57,6 @@ jobs:
       - image: zaherg/php-7.0-xdebug-alpine:latest
     steps:
       - checkout
-#      - restore_cache:
-#          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
@@ -84,8 +80,6 @@ jobs:
       - image: zaherg/php-7.1-xdebug-alpine:latest
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Setup GitHub Keys
           command: 'composer config --global github-oauth.github.com "${GITHUB_KEY}"'
