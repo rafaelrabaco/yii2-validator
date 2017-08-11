@@ -8,7 +8,7 @@ Yii2 Extension that provide validations and features for Brazilian and Portugal 
 * CEI: Cadastro específico no INSS **(BR)**
 * NIF: Número de identificação fiscal **(PT)**
  
-[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat-square)](http://www.yiiframework.com/)
+[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat-square&maxAge=3600)](http://www.yiiframework.com/)
 [![CircleCI](https://img.shields.io/circleci/project/github/rafaelrabaco/yii2-validator.svg?style=flat-square)](https://circleci.com/gh/rafaelrabaco/yii2-validator)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E=7.0-8892BF.svg?style=flat-square)](https://php.net)
 [![Latest Stable Version](https://img.shields.io/packagist/v/rafaelrabaco/yii2-validator.svg?style=flat-square)](https://packagist.org/packages/rafaelrabaco/yii2-validator)
